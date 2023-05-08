@@ -1,14 +1,44 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//import { useState } from 'react';
+import { Button, StyleSheet, Text, View,  } from 'react-native';
+
+
+
+const Word = () => {
+
+  const cards = [
+    { french: "désespéré", english: "forlorn" },
+    { french: "boiter", english: "to limp" },
+    { french: "accablant", english: "damning" },
+    { french: "précurseur", english: "forerunner" },
+  ];
+  
+  const frenchWords = cards.map(card => card.french)
+
+  const randomWord = frenchWords[Math.floor(Math.random() * frenchWords.length)];
+  
+  return (
+      <Text>{randomWord}</Text>
+  );
+};
+
+
+
 
 export default function App() {
+  
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text id="flashcards">{Word()}
+        </Text>
+      <Button title="Suivant" />
       <StatusBar style="auto" />
     </View>
   );
 }
+
+
+
 
 const styles = StyleSheet.create({
   container: {
