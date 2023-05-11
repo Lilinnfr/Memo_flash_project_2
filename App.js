@@ -1,60 +1,16 @@
-//import { StatusBar } from 'expo-status-bar';
+
 //import { useState } from 'react';
 import { Button, StyleSheet, Text, View,  } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import HomeScreen from './screens/Home';
+import ProfileScreen from './screens/Profile'
+import SettingsScreen from './screens/Settings';
 
 const tab = createBottomTabNavigator();
 
-function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <Text> Bonjour ! </Text>
-    </View>
-  )
-}
-function SettingsScreen() {
-  return (
-    <View style={styles.container}>
-      <Text> Settings </Text>
-    </View>
-  )
-}
-function ProfileScreen() {
-  return (
-    <View style={styles.container}>
-      <Text> Profile </Text>
-    </View>
-  )
-}
-
-
-
-// const Word = () => {
-
-//   const cards = [
-//     { french: "désespéré", english: "forlorn" },
-//     { french: "boiter", english: "to limp" },
-//     { french: "accablant", english: "damning" },
-//     { french: "précurseur", english: "forerunner" },
-//   ];
-
-//   const words = {
-//     "clôture" : "fence",
-//     "tas" : "heap",
-//     "persil" : "parsley",
-//   }
-  
-//   const frenchWords = Object.keys(words);
-
-//   const randomWord = frenchWords[Math.floor(Math.random() * frenchWords.length)];
-  
-//   return (
-//       <Text>{randomWord}</Text>
-//   );
-// };
 
 export default function App() {
   return (
@@ -81,29 +37,3 @@ export default function App() {
   )
 }
 
-
-
-// export default function App() {
-  
-//   return (
-//     <View style={styles.container}>
-//       <Text id="flashcards" style={styles.text} >{Word()}
-//         </Text>
-//       <Button title="Suivant" color="#FFB266" />
-//       <StatusBar style="auto" />
-//     </View>
-//   );
-// }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFE5CC',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-      marginBottom: 40,
-  },
-});
