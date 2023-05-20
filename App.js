@@ -19,19 +19,19 @@ export default function App() {
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
 
-          if (route.name == "Home") {
+          if (route.name == "Accueil") {
             iconName = "home-outline";
-          } else if (route.name == "Settings") {
+          } else if (route.name == "Paramètres") {
             iconName = "settings-outline";
-          } else if (route.name == "Profile") {
+          } else if (route.name == "Profil") {
             iconName = "person-outline";
           }
-          return <Ionicons name={iconName} size={30} color="red" />
+          return <Ionicons name={iconName} size={30} color="#F79F95" />
         }
       })}>
-        <tab.Screen name="Home" component={HomeScreen} />
-        <tab.Screen name="Settings" component={SettingsScreen} />
-        <tab.Screen name="Profile" component={ProfileScreen} />
+        <tab.Screen name="Profil" component={ProfileScreen} />
+        <tab.Screen name="Accueil" component={HomeScreen} />
+        <tab.Screen name="Paramètres" component={SettingsScreen} />
       </tab.Navigator>
     </NavigationContainer>
   )

@@ -2,22 +2,19 @@ import { Button, StyleSheet, Text, View,  } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-
+import { commonStyles } from '../styles';
 
 
 const Word = () => {
 
-  const cards = [
-    { french: "désespéré", english: "forlorn" },
-    { french: "boiter", english: "to limp" },
-    { french: "accablant", english: "damning" },
-    { french: "précurseur", english: "forerunner" },
-  ];
 
   const words = {
+    "désespéré" : "forlorn",
+    "boiter" : "to limp",
+    "accablant" : "damning",
     "clôture" : "fence",
     "tas" : "heap",
+    "précurseur" : "forerunner",
     "persil" : "parsley",
   }
   
@@ -33,25 +30,13 @@ const Word = () => {
 
 const HomeScreen = () => {
     return (
-      <View style={styles.container}>
-        <Text id="flashcards" style={styles.text} >{Word()}
+      <View style={commonStyles.container}>
+        <Text id="flashcards" style={commonStyles.text} >{Word()}
         </Text>
-        <Button title="Suivant" color="#FFB266" />
+        <Button title="Suivant" color="#F79F95"  />
       </View>
     )
   };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFE5CC',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-      marginBottom: 40,
-  },
-});
   
 
 export default HomeScreen;
